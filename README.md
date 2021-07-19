@@ -2,7 +2,7 @@ Run via `python chords.py`
 
 Requires python 3.6 or later.
 
-Modules:
+* Modules:
     * `notes`:          lowest level, contains logic about notes and scales
     * `chords`:         depends on `notes`, has logic about chords
     * `ui`:             GUI layout
