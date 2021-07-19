@@ -29,9 +29,9 @@ class UI:
             self.progression_frame.columnconfigure(i, weight=1)
 
         for j, (tem, cho) in enumerate(zip(template, chords)):
-            lbl_prog = tk.Label(master=self.progression_frame, text=tem, font="Helvetica 18", height=1, bg="red")
-            lbl_prog.grid(row=0, column=j, sticky="sew", padx=10, pady=10)
-            lbl_chord = tk.Label(master=self.progression_frame, text=cho, font="Helvetica 18", height=1, bg="red")
+            lbl_prog = tk.Label(master=self.progression_frame, text=tem, font=("Courier", 18), height=1, bg="red")
+            lbl_prog.grid(row=0, column=j, sticky="sew", padx=10, pady=10, ipadx=10, ipady=10)
+            lbl_chord = tk.Label(master=self.progression_frame, text=cho, font=("Courier", 18), height=1, bg="red")
             self.chord_labels.append(lbl_chord)
             lbl_chord.grid(row=1, column=j, sticky="new", padx=10, pady=10)        
 
@@ -94,7 +94,7 @@ class UI:
         btn_next_key.pack(side="right")
         frm_key_selector_mid.columnconfigure([0,1,2], weight=1)
         frm_key_selector_mid.rowconfigure([0,1,2], weight=1)
-        lbl_key = tk.Label(master=frm_key_selector_mid, text="Key:", font="Helvetica 24", anchor=tk.CENTER)
+        lbl_key = tk.Label(master=frm_key_selector_mid, text="Key:", font=("Courier", 18), anchor=tk.CENTER)
         lbl_key.grid(column=1, row=1)
         app.key_label = lbl_key
 
@@ -104,9 +104,9 @@ class UI:
 
         numerals = ["I", "IIm", "IIIm", "IV", "V", "VIm", "VIIo"]
         for j in range(7):
-            lbl_num = tk.Label(master=frm_key_display, text=numerals[j], font="Helvetica 18")
+            lbl_num = tk.Label(master=frm_key_display, text=numerals[j], font=("Courier", 18))
             lbl_num.grid(row=0, column=j, sticky="nsew", padx=10, pady=10)
-            lbl_degree = tk.Label(master=frm_key_display, font="Helvetica 18")
+            lbl_degree = tk.Label(master=frm_key_display, font=("Courier", 18))
             lbl_degree.grid(row=1, column=j, sticky="nsew", padx=10, pady=10)
             app.degree_labels.append(lbl_degree)
 
