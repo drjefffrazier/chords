@@ -1,4 +1,4 @@
-Run via `python chords.py`
+Run via `python app.py`
 
 Requires python 3.6 or later.
 
